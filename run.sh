@@ -19,12 +19,15 @@ echo "# $name" > README.md
 # add new scripts to package.json w/ node
 node "$THIS_PATH/node-helper.js" "$PWD/package.json"
 
-echo "Copy src template"
+echo "Copying src template"
 rm -fr src
-cp -a "$THIS_PATH/src" ./
+cp -a "$THIS_PATH/templates/src" ./
 
-echo "Copy .editorconfig template"
-cp "$THIS_PATH/.editorconfig" "$PWD"
+echo "Copying .editorconfig template"
+cp "$THIS_PATH/templates/.editorconfig" "$PWD"
+
+echo "Copying .gitignore template"
+cp "$THIS_PATH/templates/.gitignore" "$PWD"
 
 echo "Adding git"
 git init "$PWD"
@@ -33,6 +36,8 @@ git add package.json
 git add package-lock.json
 git add public
 git add src
+git add .gitignore
+git add .editorconfig
 git commit -m init
 
 open -a Visual\ Studio\ Code .
