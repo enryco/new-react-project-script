@@ -1,4 +1,4 @@
-# react-project
+# new-react-project-script
 
 A little bash script to set up my custom react application structure.
 Uses `create-react-app` and adds
