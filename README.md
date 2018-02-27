@@ -6,6 +6,7 @@ Uses `create-react-app` and adds
 - Custom folder structure
 - .editorconfig
 - Git
+
 as well as opens it in a editor and starts the dev server.
 
 Run `run.sh` in a directory.
